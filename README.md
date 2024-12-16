@@ -18,7 +18,7 @@
 
    `backend` ディレクトリにて、`venv` を有効化してください。
    source .venv/bin/activate   
-   # (Windowsなら .\.venv\Scripts\Activate.ps1)
+   (Windowsなら .\.venv\Scripts\Activate.ps1)
 
 2. **依存バッケージのインストール**
    `backend` ディレクトリで、以下のコマンドを実行すると `requirements.txt` に記載されたパッケージがインストールされます。
