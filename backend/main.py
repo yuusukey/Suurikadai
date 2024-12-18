@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List
 import json
+from routes.menu import router as menu_router
 
 app = FastAPI()
 
@@ -18,3 +19,5 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(menu_router, prefix="/menu", tags=["menu"])
