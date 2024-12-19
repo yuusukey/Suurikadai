@@ -2,17 +2,15 @@ from pydantic import BaseModel
 from typing import Optional
 
 
-class MenuItemBase(BaseModel):
+class MenuItemCreate(BaseModel):
     name: str
-    price: int
-    satisfaction: int = 0
-    description: Optional[str] = None
-    category: Optional[str] = None
+    cookingtime: int
+    satiety: int
+    satisfaction: int
+    vitamins: Optional[str] = None
+    fatcontent: Optional[str] = None
+    nutritionvalue: Optional[str] = None
 
 
-class MenuItemCreate(MenuItemBase):
-    pass
-
-
-class MenuItem(MenuItemBase):
+class MenuItem(MenuItemCreate):
     id: int

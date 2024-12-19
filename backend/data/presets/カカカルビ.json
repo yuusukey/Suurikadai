@@ -88,5 +88,15 @@
     "vitamins": "0",
     "fatcontent": "8",
     "nutritionvalue": "20"
+  },
+  {
+    "id": 10,
+    "name": "カカカルビ",
+    "cookingtime": 1,
+    "satiety": 1,
+    "satisfaction": 1,
+    "vitamins": "1",
+    "fatcontent": "1",
+    "nutritionvalue": "1"
   }
 ]
