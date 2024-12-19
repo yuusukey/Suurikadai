@@ -2,6 +2,8 @@ import pulp
 import time
 
 # function --------------------------------------------------------------------
+
+
 def generate_yakiniku_optimization_model():
     # MIP model ---------------------------------------------------------------
     prob = pulp.LpProblem("Yakiniku_Optimization", pulp.LpMaximize)
@@ -11,7 +13,8 @@ def generate_yakiniku_optimization_model():
     food_items = [
         "カルビ", "ロース", "鶏もも", "豚バラ", "ピーマン", "玉ねぎ", "焼き芋", "アイスクリーム", "プリン"
     ]
-    x = {item: pulp.LpVariable(f"x_{item}", lowBound=0, cat='Integer') for item in food_items}
+    x = {item: pulp.LpVariable(f"x_{item}", lowBound=0, cat='Integer')
+         for item in food_items}
 
     # Parameters --------------------------------------------------------------
     # 焼く時間（分/皿）、満腹度、満足度、ビタミン、脂質、栄養価
@@ -29,30 +32,38 @@ def generate_yakiniku_optimization_model():
 
     # Objective function ------------------------------------------------------
     # 満足度を最大化
-    prob += pulp.lpSum(params[item][2] * x[item] for item in food_items), "Maximize_Satisfaction"
+    prob += pulp.lpSum(params[item][2] * x[item]
+                       for item in food_items), "Maximize_Satisfaction"
 
     # Constraints -------------------------------------------------------------
     # 時間制約（120分以内）
-    prob += pulp.lpSum(params[item][0] * x[item] for item in food_items if params[item][0] > 0) <= 120, "Time_Constraint"
+    prob += pulp.lpSum(params[item][0] * x[item]
+                       for item in food_items if params[item][0] > 0) <= 120, "Time_Constraint"
 
     # 満腹度制約（100ポイント以内）
-    prob += pulp.lpSum(params[item][1] * x[item] for item in food_items) <= 100, "Fullness_Constraint"
+    prob += pulp.lpSum(params[item][1] * x[item]
+                       for item in food_items) <= 100, "Fullness_Constraint"
 
     # ビタミン摂取量（20mg以上）
-    prob += pulp.lpSum(params[item][3] * x[item] for item in food_items if params[item][3] > 0) >= 20, "Vitamin_Constraint"
+    prob += pulp.lpSum(params[item][3] * x[item]
+                       for item in food_items if params[item][3] > 0) >= 20, "Vitamin_Constraint"
 
     # 脂質摂取量（20g以下）
-    prob += pulp.lpSum(params[item][4] * x[item] for item in food_items) <= 20, "Fat_Constraint"
+    prob += pulp.lpSum(params[item][4] * x[item]
+                       for item in food_items) <= 20, "Fat_Constraint"
 
     # 栄養価摂取量（50g以上）
-    prob += pulp.lpSum(params[item][5] * x[item] for item in food_items) >= 50, "Nutrition_Constraint"
+    prob += pulp.lpSum(params[item][5] * x[item]
+                       for item in food_items) >= 50, "Nutrition_Constraint"
 
     return prob, food_items, x
+
 
 def solve_mip(prob, msg=True, timeLimit=0):
     solver = pulp.PULP_CBC_CMD(msg, timeLimit)
     status = prob.solve(solver)
     return status
+
 
 def display_result(prob, status, elapsed_time, food_items, x):
     print("=" * 50)
@@ -75,6 +86,8 @@ def display_result(prob, status, elapsed_time, food_items, x):
     print("=" * 50)
 
 # main ------------------------------------------------------------------------
+
+
 def main():
     # 最適化モデルの生成
     prob, food_items, x = generate_yakiniku_optimization_model()
@@ -89,5 +102,6 @@ def main():
 
     # 結果の表示
     display_result(prob, status, end_time - start_time, food_items, x)
+
 
 main()
