@@ -2,7 +2,7 @@
 
 ## フロントエンド環境
 
-1. **依存パッケージのインストール**  
+1. **依存パッケージのインストール**
    `yakiniku_app` ディレクトリへ移動して、以下のコマンドを実行してください。
    npm install
 
@@ -20,9 +20,6 @@
    source .venv/bin/activate
    (Windowsなら .\.venv\Scripts\Activate.ps1)
 
-   下記コマンドを実行することにより、サーバーが立ち上がります。
-   uvicorn main:app --reload
-
 2. **依存バッケージのインストール**
    `backend` ディレクトリで、以下のコマンドを実行すると `requirements.txt` に記載されたパッケージがインストールされます。
    pip install -r requirements.txt
@@ -30,6 +27,10 @@
    新規にインストールしたパッケージを `requirements.txt` に書き出す場合は、
    pip freeze > requirements.txt
    を実行してください。
+
+3. **サーバーの立ち上げ**
+   下記コマンドを実行することにより、サーバーが立ち上がります。
+   uvicorn main:app --reload
 
 ## データ格納場所
    メニュー情報やその他のデータは、`backend/data` ディレクトリ内の `JSON` ファイルに格納されています。
