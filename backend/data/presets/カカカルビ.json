@@ -1,78 +1,5 @@
 [
   {
-    "id": 2,
-    "name": "塩キャベツ",
-    "cookingtime": 0,
-    "satiety": 5,
-    "satisfaction": 5,
-    "vitamins": "4",
-    "fatcontent": "3",
-    "nutritionvalue": "0"
-  },
-  {
-    "id": 3,
-    "name": "チョレギサラダ",
-    "cookingtime": 0,
-    "satiety": 3,
-    "satisfaction": 3,
-    "vitamins": "3",
-    "fatcontent": "1",
-    "nutritionvalue": "0"
-  },
-  {
-    "id": 4,
-    "name": "フライドポテト",
-    "cookingtime": 0,
-    "satiety": 8,
-    "satisfaction": 12,
-    "vitamins": "0",
-    "fatcontent": "7",
-    "nutritionvalue": "0"
-  },
-  {
-    "id": 5,
-    "name": "カリッとろたこ焼き",
-    "cookingtime": 0,
-    "satiety": 11,
-    "satisfaction": 9,
-    "vitamins": "0",
-    "fatcontent": "6",
-    "nutritionvalue": "0"
-  },
-  {
-    "id": 6,
-    "name": "北海道産じゃがバターホイル焼き",
-    "cookingtime": 10,
-    "satiety": 20,
-    "satisfaction": 20,
-    "vitamins": "2",
-    "fatcontent": "2",
-    "nutritionvalue": "0"
-  },
-  {
-    "id": 7,
-    "name": "石焼ビビンバ",
-    "cookingtime": 0,
-    "satiety": 15,
-    "satisfaction": 20,
-    "vitamins": "2",
-    "fatcontent": "3",
-    "nutritionvalue": "0"
-  },
-  {
-    "id": 8,
-    "name": "野菜クッパ",
-    "cookingtime": 0,
-    "satiety": 5,
-    "satisfaction": 3,
-    "vitamins": "1",
-    "fatcontent": "1",
-    "nutritionvalue": "0"
-  },
-  {
-    "id": 9,
-    "name": "タン",
-    "cookingtime": 5,
     "id": 1,
     "name": "カルビ",
     "cookingtime": 2,
@@ -150,5 +77,26 @@
     "satisfaction": 20,
     "vitamins": "0",
     "fatcontent": "10",
+    "nutritionvalue": "15"
+  },
+  {
+    "id": 9,
+    "name": "プリン",
+    "cookingtime": 0,
+    "satiety": 12,
+    "satisfaction": 15,
+    "vitamins": "0",
+    "fatcontent": "8",
+    "nutritionvalue": "20"
+  },
+  {
+    "id": 10,
+    "name": "カカカルビ",
+    "cookingtime": 1,
+    "satiety": 1,
+    "satisfaction": 1,
+    "vitamins": "1",
+    "fatcontent": "1",
+    "nutritionvalue": "1"
   }
 ]

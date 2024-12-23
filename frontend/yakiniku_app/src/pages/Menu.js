@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom'; // mainブランチからの追加
 
 function Menu() {
   const [menuItems, setMenuItems] = useState([]);
@@ -187,7 +188,7 @@ function Menu() {
       <div>
         <input
           value={presetName}
-          onChange={e=>setPresetName(e.target.value)}
+          onChange={e => setPresetName(e.target.value)}
           placeholder="プリセット名"
         />
         <button onClick={savePreset}>現在のメニューをプリセットとして保存</button>
@@ -195,26 +196,26 @@ function Menu() {
 
       {/* 新規追加フォーム */}
       <h2>新規メニュー追加</h2>
-      <input value={newName} onChange={e=>setNewName(e.target.value)} placeholder="名前" />
-      <input value={newCookingTime} onChange={e=>setNewCookingTime(e.target.value)} placeholder="焼き時間" type="number" />
-      <input value={newSatiety} onChange={e=>setNewSatiety(e.target.value)} placeholder="満腹度" type="number" />
-      <input value={newSatisfaction} onChange={e=>setNewSatisfaction(e.target.value)} placeholder="満足度" type="number" />
-      <input value={newVitamins} onChange={e=>setNewVitamins(e.target.value)} placeholder="ビタミン" />
-      <input value={newFatContent} onChange={e=>setNewFatContent(e.target.value)} placeholder="脂質" />
-      <input value={newNutritionValue} onChange={e=>setNewNutritionValue(e.target.value)} placeholder="栄養価" />
+      <input value={newName} onChange={e => setNewName(e.target.value)} placeholder="名前" />
+      <input value={newCookingTime} onChange={e => setNewCookingTime(e.target.value)} placeholder="焼き時間" type="number" />
+      <input value={newSatiety} onChange={e => setNewSatiety(e.target.value)} placeholder="満腹度" type="number" />
+      <input value={newSatisfaction} onChange={e => setNewSatisfaction(e.target.value)} placeholder="満足度" type="number" />
+      <input value={newVitamins} onChange={e => setNewVitamins(e.target.value)} placeholder="ビタミン" />
+      <input value={newFatContent} onChange={e => setNewFatContent(e.target.value)} placeholder="脂質" />
+      <input value={newNutritionValue} onChange={e => setNewNutritionValue(e.target.value)} placeholder="栄養価" />
       <button onClick={handleAdd}>追加</button>
 
       {/* 編集フォーム（editItemIdがある時のみ表示） */}
       {editItemId && (
         <div>
           <h2>メニュー編集 (ID: {editItemId})</h2>
-          <input value={editName} onChange={e=>setEditName(e.target.value)} placeholder="名前" />
-          <input value={editCookingTime} onChange={e=>setEditCookingTime(e.target.value)} placeholder="焼き時間" type="number" />
-          <input value={editSatiety} onChange={e=>setEditSatiety(e.target.value)} placeholder="満腹度" type="number" />
-          <input value={editSatisfaction} onChange={e=>setEditSatisfaction(e.target.value)} placeholder="満足度" type="number" />
-          <input value={editVitamins} onChange={e=>setEditVitamins(e.target.value)} placeholder="ビタミン" />
-          <input value={editFatContent} onChange={e=>setEditFatContent(e.target.value)} placeholder="脂質" />
-          <input value={editNutritionValue} onChange={e=>setEditNutritionValue(e.target.value)} placeholder="栄養価" />
+          <input value={editName} onChange={e => setEditName(e.target.value)} placeholder="名前" />
+          <input value={editCookingTime} onChange={e => setEditCookingTime(e.target.value)} placeholder="焼き時間" type="number" />
+          <input value={editSatiety} onChange={e => setEditSatiety(e.target.value)} placeholder="満腹度" type="number" />
+          <input value={editSatisfaction} onChange={e => setEditSatisfaction(e.target.value)} placeholder="満足度" type="number" />
+          <input value={editVitamins} onChange={e => setEditVitamins(e.target.value)} placeholder="ビタミン" />
+          <input value={editFatContent} onChange={e => setEditFatContent(e.target.value)} placeholder="脂質" />
+          <input value={editNutritionValue} onChange={e => setEditNutritionValue(e.target.value)} placeholder="栄養価" />
           <button onClick={handleEditSave}>保存</button>
           <button onClick={() => setEditItemId(null)}>キャンセル</button>
         </div>
@@ -226,6 +227,8 @@ function Menu() {
             {item.name}, 焼き時間: {item.cookingtime}分/皿, 満腹度: {item.satiety}, 満足度: {item.satisfaction}, ビタミン: {item.vitamins}, 脂質: {item.fatcontent}, 栄養価: {item.nutritionvalue}
             <button onClick={() => handleDelete(item.id)}>削除</button>
             <button onClick={() => startEdit(item)}>編集</button>
+            {/* Linkコンポーネントの使用例（必要に応じて追加） */}
+            {/* <Link to={`/edit/${item.id}`}>編集ページへ</Link> */}
           </li>
         ))}
       </ul>
