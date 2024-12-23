@@ -73,82 +73,60 @@
     "id": 9,
     "name": "タン",
     "cookingtime": 5,
-    "id": 1,
-    "name": "カルビ",
-    "cookingtime": 2,
-    "satiety": 20,
-    "satisfaction": 50,
-    "vitamins": "2",
-    "fatcontent": "15",
-    "nutritionvalue": "40"
-  },
-  {
-    "id": 2,
-    "name": "ロース",
-    "cookingtime": 3,
-    "satiety": 18,
-    "satisfaction": 40,
-    "vitamins": "3",
-    "fatcontent": "12",
-    "nutritionvalue": "35"
-  },
-  {
-    "id": 3,
-    "name": "鶏もも",
-    "cookingtime": 5,
-    "satiety": 15,
-    "satisfaction": 40,
-    "vitamins": "5",
-    "fatcontent": "8",
-    "nutritionvalue": "30"
-  },
-  {
-    "id": 4,
-    "name": "豚バラ",
-    "cookingtime": 5,
-    "satiety": 25,
-    "satisfaction": 45,
-    "vitamins": "1",
-    "fatcontent": "18",
-    "nutritionvalue": "25"
-  },
-  {
-    "id": 5,
-    "name": "ピーマン",
-    "cookingtime": 2,
-    "satiety": 5,
-    "satisfaction": 10,
-    "vitamins": "8",
-    "fatcontent": "0",
-    "nutritionvalue": "20"
-  },
-  {
-    "id": 6,
-    "name": "玉ねぎ",
-    "cookingtime": 1,
-    "satiety": 6,
-    "satisfaction": 12,
-    "vitamins": "6",
-    "fatcontent": "0",
-    "nutritionvalue": "25"
-  },
-  {
-    "id": 7,
-    "name": "焼きいも",
-    "cookingtime": 7,
-    "satiety": 10,
-    "satisfaction": 0,
-    "vitamins": "4",
-    "fatcontent": "2",
-    "nutritionvalue": "30"
-  },
-  {
-    "id": 8,
-    "name": "アイスクリーム",
-    "cookingtime": 0,
     "satiety": 8,
     "satisfaction": 20,
     "vitamins": "0",
     "fatcontent": "10",
+    "nutritionvalue": "0"
+  },
+  {
+    "id": 10,
+    "name": "ロース",
+    "cookingtime": 6,
+    "satiety": 15,
+    "satisfaction": 20,
+    "vitamins": "0",
+    "fatcontent": "9",
+    "nutritionvalue": "0"
+  },
+  {
+    "id": 11,
+    "name": "カルビ",
+    "cookingtime": 8,
+    "satiety": 15,
+    "satisfaction": 25,
+    "vitamins": "0",
+    "fatcontent": "16",
+    "nutritionvalue": "0"
+  },
+  {
+    "id": 12,
+    "name": "ハラミ",
+    "cookingtime": 6,
+    "satiety": 8,
+    "satisfaction": 12,
+    "vitamins": "0",
+    "fatcontent": "6",
+    "nutritionvalue": "0"
+  },
+  {
+    "id": 13,
+    "name": "豚カルビ",
+    "cookingtime": 12,
+    "satiety": 15,
+    "satisfaction": 15,
+    "vitamins": "0",
+    "fatcontent": "17",
+    "nutritionvalue": "0"
+  },
+  {
+    "id": 14,
+    "name": "鶏",
+    "cookingtime": 13,
+    "satiety": 10,
+    "satisfaction": 10,
+    "vitamins": "0",
+    "fatcontent": "3",
+    "nutritionvalue": "0"
   }
 ]
