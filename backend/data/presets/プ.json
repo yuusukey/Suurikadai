@@ -1,0 +1,133 @@
+[
+    {
+      "id": 2,
+      "name": "塩キャベツ",
+      "cookingtime": 0,
+      "satiety": 5,
+      "satisfaction": 5,
+      "vitamins": 2.0,
+      "fatcontent": 1.0,
+      "nutritionvalue": 1.0
+    },
+    {
+      "id": 3,
+      "name": "チョレギサラダ",
+      "cookingtime": 0,
+      "satiety": 4,
+      "satisfaction": 4,
+      "vitamins": 3.0,
+      "fatcontent": 1.0,
+      "nutritionvalue": 1.0
+    },
+    {
+      "id": 4,
+      "name": "フライドポテト",
+      "cookingtime": 0,
+      "satiety": 8,
+      "satisfaction": 10,
+      "vitamins": 0.0,
+      "fatcontent": 5.0,
+      "nutritionvalue": 1.0
+    },
+    {
+      "id": 5,
+      "name": "カリッとろたこ焼き",
+      "cookingtime": 0,
+      "satiety": 7,
+      "satisfaction": 9,
+      "vitamins": 0.0,
+      "fatcontent": 6.0,
+      "nutritionvalue": 1.0
+    },
+    {
+      "id": 6,
+      "name": "北海道産じゃがバターホイル焼き",
+      "cookingtime": 10,
+      "satiety": 15,
+      "satisfaction": 15,
+      "vitamins": 2.0,
+      "fatcontent": 4.0,
+      "nutritionvalue": 1.0
+    },
+    {
+      "id": 7,
+      "name": "石焼ビビンバ",
+      "cookingtime": 5,
+      "satiety": 20,
+      "satisfaction": 20,
+      "vitamins": 2.0,
+      "fatcontent": 3.0,
+      "nutritionvalue": 1.0
+    },
+    {
+      "id": 8,
+      "name": "野菜クッパ",
+      "cookingtime": 3,
+      "satiety": 8,
+      "satisfaction": 5,
+      "vitamins": 2.0,
+      "fatcontent": 1.0,
+      "nutritionvalue": 1.0
+    },
+    {
+      "id": 9,
+      "name": "タン",
+      "cookingtime": 6,
+      "satiety": 8,
+      "satisfaction": 18,
+      "vitamins": 0.0,
+      "fatcontent": 10.0,
+      "nutritionvalue": 0.0
+    },
+    {
+      "id": 10,
+      "name": "ロース",
+      "cookingtime": 6,
+      "satiety": 15,
+      "satisfaction": 22,
+      "vitamins": 0.0,
+      "fatcontent": 9.0,
+      "nutritionvalue": 0.0
+    },
+    {
+      "id": 11,
+      "name": "カルビ",
+      "cookingtime": 8,
+      "satiety": 15,
+      "satisfaction": 25,
+      "vitamins": 0.0,
+      "fatcontent": 16.0,
+      "nutritionvalue": 0.0
+    },
+    {
+      "id": 12,
+      "name": "ハラミ",
+      "cookingtime": 6,
+      "satiety": 8,
+      "satisfaction": 12,
+      "vitamins": 0.0,
+      "fatcontent": 6.0,
+      "nutritionvalue": 0.0
+    },
+    {
+      "id": 13,
+      "name": "豚カルビ",
+      "cookingtime": 10,
+      "satiety": 15,
+      "satisfaction": 15,
+      "vitamins": 0.0,
+      "fatcontent": 17.0,
+      "nutritionvalue": 0.0
+    },
+    {
+      "id": 14,
+      "name": "鶏",
+      "cookingtime": 8,
+      "satiety": 10,
+      "satisfaction": 10,
+      "vitamins": 0.0,
+      "fatcontent": 3.0,
+      "nutritionvalue": 0.0
+    }
+  ]
+  

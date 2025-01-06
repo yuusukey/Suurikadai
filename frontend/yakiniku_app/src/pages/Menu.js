@@ -124,9 +124,9 @@ function Menu() {
       cookingtime: Number(editCookingTime),
       satiety: Number(editSatiety),
       satisfaction: Number(editSatisfaction),
-      vitamins: editVitamins,
-      fatcontent: editFatContent,
-      nutritionvalue: editNutritionValue
+      vitamins: Number(editVitamins),
+      fatcontent: Number(editFatContent),
+      nutritionvalue: Number(editNutritionValue)
     };
     axios.put(`http://localhost:8000/menu/${editItemId}`, updatedItem)
       .then(response => {
@@ -153,9 +153,9 @@ function Menu() {
       cookingtime: Number(newCookingTime),
       satiety: Number(newSatiety),
       satisfaction: Number(newSatisfaction),
-      vitamins: newVitamins,
-      fatcontent: newFatContent,
-      nutritionvalue: newNutritionValue
+      vitamins: Number(newVitamins),
+      fatcontent: Number(newFatContent),
+      nutritionvalue: Number(newNutritionValue)
     };
     axios.post('http://localhost:8000/menu/', newItem)
       .then(response => {
@@ -202,7 +202,7 @@ function Menu() {
       <input value={newSatisfaction} onChange={e => setNewSatisfaction(e.target.value)} placeholder="満足度" type="number" />
       <input value={newVitamins} onChange={e => setNewVitamins(e.target.value)} placeholder="ビタミン" />
       <input value={newFatContent} onChange={e => setNewFatContent(e.target.value)} placeholder="脂質" />
-      <input value={newNutritionValue} onChange={e => setNewNutritionValue(e.target.value)} placeholder="栄養価" />
+      <input value={newNutritionValue} onChange={e => setNewNutritionValue(e.target.value)} placeholder="サイドメニュー" />
       <button onClick={handleAdd}>追加</button>
 
       {/* 編集フォーム（editItemIdがある時のみ表示） */}
@@ -215,7 +215,7 @@ function Menu() {
           <input value={editSatisfaction} onChange={e => setEditSatisfaction(e.target.value)} placeholder="満足度" type="number" />
           <input value={editVitamins} onChange={e => setEditVitamins(e.target.value)} placeholder="ビタミン" />
           <input value={editFatContent} onChange={e => setEditFatContent(e.target.value)} placeholder="脂質" />
-          <input value={editNutritionValue} onChange={e => setEditNutritionValue(e.target.value)} placeholder="栄養価" />
+          <input value={editNutritionValue} onChange={e => setEditNutritionValue(e.target.value)} placeholder="サイドメニュー" />
           <button onClick={handleEditSave}>保存</button>
           <button onClick={() => setEditItemId(null)}>キャンセル</button>
         </div>
@@ -224,7 +224,7 @@ function Menu() {
       <ul>
         {menuItems.map(item => (
           <li key={item.id}>
-            {item.name}, 焼き時間: {item.cookingtime}分/皿, 満腹度: {item.satiety}, 満足度: {item.satisfaction}, ビタミン: {item.vitamins}, 脂質: {item.fatcontent}, 栄養価: {item.nutritionvalue}
+            {item.name}, 焼き時間: {item.cookingtime}分/皿, 満腹度: {item.satiety}, 満足度: {item.satisfaction}, ビタミン: {item.vitamins}, 脂質: {item.fatcontent}, サイドメニュー: {item.nutritionvalue}
             <button onClick={() => handleDelete(item.id)}>削除</button>
             <button onClick={() => startEdit(item)}>編集</button>
             {/* Linkコンポーネントの使用例（必要に応じて追加） */}

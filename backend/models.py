@@ -7,9 +7,9 @@ class MenuItemCreate(BaseModel):
     cookingtime: int
     satiety: int
     satisfaction: int
-    vitamins: Optional[str] = None
-    fatcontent: Optional[str] = None
-    nutritionvalue: Optional[str] = None
+    vitamins: int
+    fatcontent: int
+    nutritionvalue: int
 
 
 class MenuItem(MenuItemCreate):

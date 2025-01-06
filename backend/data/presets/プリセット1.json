@@ -7,7 +7,7 @@
     "satisfaction": 5,
     "vitamins": "4",
     "fatcontent": "3",
-    "nutritionvalue": "0"
+    "nutritionvalue": "1"
   },
   {
     "id": 3,
@@ -17,7 +17,7 @@
     "satisfaction": 3,
     "vitamins": "3",
     "fatcontent": "1",
-    "nutritionvalue": "0"
+    "nutritionvalue": "1"
   },
   {
     "id": 4,
@@ -27,7 +27,7 @@
     "satisfaction": 12,
     "vitamins": "0",
     "fatcontent": "7",
-    "nutritionvalue": "0"
+    "nutritionvalue": "1"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "satisfaction": 9,
     "vitamins": "0",
     "fatcontent": "6",
-    "nutritionvalue": "0"
+    "nutritionvalue": "1"
   },
   {
     "id": 6,
@@ -47,7 +47,7 @@
     "satisfaction": 20,
     "vitamins": "2",
     "fatcontent": "2",
-    "nutritionvalue": "0"
+    "nutritionvalue": "1"
   },
   {
     "id": 7,
@@ -57,7 +57,7 @@
     "satisfaction": 20,
     "vitamins": "2",
     "fatcontent": "3",
-    "nutritionvalue": "0"
+    "nutritionvalue": "1"
   },
   {
     "id": 8,
@@ -67,7 +67,7 @@
     "satisfaction": 3,
     "vitamins": "1",
     "fatcontent": "1",
-    "nutritionvalue": "0"
+    "nutritionvalue": "1"
   },
   {
     "id": 9,

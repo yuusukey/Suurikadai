@@ -26,7 +26,7 @@
    
 2. **依存バッケージのインストール**
    `backend` ディレクトリで、以下のコマンドを実行すると `requirements.txt` に記載されたパッケージがインストールされます。
-   pip install -r requirements.txt
+      
 
    新規にインストールしたパッケージを `requirements.txt` に書き出す場合は、
    pip freeze > requirements.txt

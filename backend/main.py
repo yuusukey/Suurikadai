@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from typing import List
 import json
 from routes.menu import router as menu_router
+from routes.script import router as script_router  # 追加
 
 app = FastAPI()
 
@@ -21,3 +21,5 @@ app.add_middleware(
 )
 
 app.include_router(menu_router, prefix="/menu", tags=["menu"])
+app.include_router(script_router, tags=["script"])
+# もし prefix を付けたいなら app.include_router(script_router, prefix="/script", tags=["script"])
