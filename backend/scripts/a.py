@@ -3,6 +3,7 @@ import time
 import json
 from pathlib import Path
 
+
 def main():
     base_dir = Path(__file__).resolve().parent.parent  # scripts/の親(=backend)
     menu_path = base_dir / "data" / "menu.json"
@@ -23,9 +24,10 @@ def main():
         satisfaction = float(item["satisfaction"])  # 満足度
         vitamins = float(item["vitamins"])        # ビタミン
         fat = float(item["fatcontent"])           # 脂質
-        side_count = float(item["nutritionvalue"]) # サイドメニュー個数(本来は栄養価と呼んでいる欄)
+        side_count = float(item["nutritionvalue"])  # サイドメニュー個数(本来は栄養価と呼んでいる欄)
 
-        params[name] = [cooking_time, satiety, satisfaction, vitamins, fat, side_count]
+        params[name] = [cooking_time, satiety,
+                        satisfaction, vitamins, fat, side_count]
 
     # 3. PuLPモデル定義 (整数最適化)
     prob = pulp.LpProblem("Yakiniku_Optimization", pulp.LpMaximize)
@@ -38,23 +40,29 @@ def main():
 
     # 4. 目的関数: 満足度合計を最大化
     #    params[name][2] = satisfaction
-    prob += pulp.lpSum(params[name][2] * x[name] for name in params), "Maximize_Satisfaction"
+    prob += pulp.lpSum(params[name][2] * x[name]
+                       for name in params), "Maximize_Satisfaction"
 
     # 5. 制約設定
     # (1) 時間 <= 120
-    prob += pulp.lpSum(params[name][0] * x[name] for name in params) <= 120, "Time_Constraint"
+    prob += pulp.lpSum(params[name][0] * x[name]
+                       for name in params) <= 120, "Time_Constraint"
 
     # (2) 満腹度 <= 100
-    prob += pulp.lpSum(params[name][1] * x[name] for name in params) <= 100, "Fullness_Constraint"
+    prob += pulp.lpSum(params[name][1] * x[name]
+                       for name in params) <= 100, "Fullness_Constraint"
 
     # (3) ビタミン >= 20
-    prob += pulp.lpSum(params[name][3] * x[name] for name in params) >= 5, "Vitamin_Constraint"
+    prob += pulp.lpSum(params[name][3] * x[name]
+                       for name in params) >= 5, "Vitamin_Constraint"
 
     # (4) 脂質 <= 20
-    prob += pulp.lpSum(params[name][4] * x[name] for name in params) <= 40, "Fat_Constraint"
+    prob += pulp.lpSum(params[name][4] * x[name]
+                       for name in params) <= 40, "Fat_Constraint"
 
     # (5) サイドメニュー個数(栄養価欄) <= 2
-    prob += pulp.lpSum(params[name][5] * x[name] for name in params) <= 2, "SideMenu_Constraint"
+    prob += pulp.lpSum(params[name][5] * x[name]
+                       for name in params) <= 2, "SideMenu_Constraint"
 
     # 6. 求解
     start_time = time.time()
@@ -89,6 +97,7 @@ def main():
 
     # コンソール出力(デバッグ用)
     print(json.dumps(result_dict, indent=2, ensure_ascii=False))
+
 
 if __name__ == "__main__":
     main()

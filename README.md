@@ -23,10 +23,10 @@
 
    下記コマンドを実行することにより、サーバーが立ち上がります。
    uvicorn main:app --reload
-   
+
 2. **依存バッケージのインストール**
    `backend` ディレクトリで、以下のコマンドを実行すると `requirements.txt` に記載されたパッケージがインストールされます。
-      
+
 
    新規にインストールしたパッケージを `requirements.txt` に書き出す場合は、
    pip freeze > requirements.txt
