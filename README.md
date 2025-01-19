@@ -20,28 +20,14 @@
    `backend` ディレクトリにて、`venv` を有効化してください。
    source .venv/bin/activate
    (Windowsなら .\.venv\Scripts\Activate.ps1)
-<<<<<<< HEAD
-
-   下記コマンドを実行することにより、サーバーが立ち上がります。
-   uvicorn main:app --reload
-
-2. **依存バッケージのインストール**
-   `backend` ディレクトリで、以下のコマンドを実行すると `requirements.txt` に記載されたパッケージがインストールされます。
-
-
-   新規にインストールしたパッケージを `requirements.txt` に書き出す場合は、
-   pip freeze > requirements.txt
-   を実行してください。
-=======
    
 2. **依存バッケージのインストール**
    `backend` ディレクトリで、以下のコマンドを実行すると `requirements.txt` に記載されたパッケージがインストールされます。
    pip install -r requirements.txt
    先日実行した際に、uvicornのバージョンエラーが発生したため、エラーが発生した場合は適切なバージョンを導入してください。
-   例)
+   例
    PuLP==2.9.0　→　Pulp
    ==〇.〇.〇の部分を削除することで、適切な依存関係のパッケージがインストールされます。
->>>>>>> a3edeb26f05f8e4204be04d39eb42326709f9b2a
 
 3. **サーバーの立ち上げ**
    下記コマンドを実行することにより、サーバーが立ち上がります。
