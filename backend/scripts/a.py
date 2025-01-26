@@ -56,9 +56,9 @@ def main():
     prob += pulp.lpSum(params[name][3] * x[name]
                        for name in params) >= 5, "Vitamin_Constraint"
 
-    # (4) 脂質 <= 20
+    # (4) 脂質 <= 100
     prob += pulp.lpSum(params[name][4] * x[name]
-                       for name in params) <= 40, "Fat_Constraint"
+                       for name in params) <= 100, "Fat_Constraint"
 
     # (5) サイドメニュー個数(栄養価欄) <= 2
     prob += pulp.lpSum(params[name][5] * x[name]

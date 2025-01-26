@@ -18,7 +18,7 @@ function ScriptRunner() {
   const MAX_TIME = 120;
   const MAX_SATIETY = 100;
   const MIN_VITAMINS = 5;
-  const MAX_FAT = 40;
+  const MAX_FAT = 100;
   const MAX_SIDE_MENU = 2;
 
   useEffect(() => {
